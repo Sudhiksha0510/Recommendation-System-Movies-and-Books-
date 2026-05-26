@@ -218,7 +218,7 @@ ORDER BY total_budget DESC;
 
 # 📚 Learning Outcomes
 
-Through this project, I learned:
+Through this project, We learned:
 
 * ETL pipeline development
 * Data warehousing concepts
