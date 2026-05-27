@@ -1,4 +1,4 @@
-<img width="1600" height="721" alt="image" src="https://github.com/user-attachments/assets/0bf78c93-5135-469d-bb61-6e5e95d5988f" /># Recommendation-System-Movies-and-Books-
+## Recommendation-System
 ## Azure Databricks Medallion Architecture using PySpark & SQL
 
 ---
