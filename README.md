@@ -1,4 +1,4 @@
-# Recommendation-System-Movies-and-Books-
+<img width="1600" height="721" alt="image" src="https://github.com/user-attachments/assets/0bf78c93-5135-469d-bb61-6e5e95d5988f" /># Recommendation-System-Movies-and-Books-
 ## Azure Databricks Medallion Architecture using PySpark & SQL
 
 ---
@@ -24,33 +24,64 @@ for reporting and business insights.
 ---
 
 # 🏗️ Architecture
+# Architecture
 
-```text id="jlwm7p"
-Raw Datasets
-      │
-      ▼
-┌────────────┐
-│ Bronze     │
-│ Raw Data   │
-└────────────┘
-      │
-      ▼
-┌────────────┐
-│ Silver     │
-│ Cleaned &  │
-│ Standardized│
-└────────────┘
-      │
-      ▼
-┌────────────┐
-│ Gold       │
-│ Dimensions │
-│ + Facts    │
-└────────────┘
-```
+```text
++------------------+
+|  Source Systems  |
+|------------------|
+| CSV Files        |
+| SQL Server       |
+| APIs             |
++------------------+
+          |
+          v
++----------------------+
+| Azure Data Factory   |
+|  (Data Ingestion)    |
++----------------------+
+          |
+          v
++------------------+
+|  Bronze Layer    |
+|------------------|
+| Raw Data Storage |
++------------------+
+          |
+   PySpark / SQL
+          |
+          v
++------------------+
+|  Silver Layer    |
+|------------------|
+| Cleaned &        |
+| Transformed Data |
++------------------+
+          |
+   PySpark / SQL
+          |
+          v
++------------------+
+|   Gold Layer     |
+|------------------|
+| Fact & Dimension |
+| Tables           |
++------------------+
+          |
+          v
++------------------+
+|  Power BI        |
+| Presentation &   |
+| Dashboard Layer  |
++------------------+
 
----
 
+## Architecture Flow
+1. Data is ingested from APIs/SQL sources using Azure Data Factory.
+2. Raw data is stored in the Bronze layer.
+3. Data cleaning and transformations are performed in the Silver layer using PySpark and SQL.
+4. Business-ready fact and dimension tables are created in the Gold layer.
+5. Power BI is used for visualization and reporting.
 # ⚙️ Technologies Used
 
 * Python
