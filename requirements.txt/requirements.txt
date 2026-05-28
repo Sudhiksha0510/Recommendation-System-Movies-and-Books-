@@ -1,0 +1,9 @@
+//requirements
+pyspark
+delta-spark
+pandas
+numpy
+azure-storage-blob
+azure-identity
+pyodbc
+sqlalchemy
