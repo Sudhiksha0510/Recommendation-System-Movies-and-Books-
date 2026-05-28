@@ -147,6 +147,8 @@ It includes:
 * Dimension tables
 * Fact tables
 * Star schema design
+  <img width="1114" height="483" alt="image" src="https://github.com/user-attachments/assets/767cd454-2bde-441e-a17c-8c4fd89877e0" />
+
 
 ---
 
