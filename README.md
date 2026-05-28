@@ -26,54 +26,8 @@ for reporting and business insights.
 # 🏗️ Architecture
 # Architecture
 
-```text
-+------------------+
-|  Source Systems  |
-|------------------|
-| CSV Files        |
-| SQL Server       |
-| APIs             |
-+------------------+
-          |
-          v
-+----------------------+
-| Azure Data Factory   |
-|  (Data Ingestion)    |
-+----------------------+
-          |
-          v
-+------------------+
-|  Bronze Layer    |
-|------------------|
-| Raw Data Storage |
-+------------------+
-          |
-   PySpark / SQL
-          |
-          v
-+------------------+
-|  Silver Layer    |
-|------------------|
-| Cleaned &        |
-| Transformed Data |
-+------------------+
-          |
-   PySpark / SQL
-          |
-          v
-+------------------+
-|   Gold Layer     |
-|------------------|
-| Fact & Dimension |
-| Tables           |
-+------------------+
-          |
-          v
-+------------------+
-|  Power BI        |
-| Presentation &   |
-| Dashboard Layer  |
-+------------------+
+
+<img width="1600" height="721" alt="image" src="https://github.com/user-attachments/assets/7127599c-98df-4f2b-86ec-0c666a746adc" />
 
 
 ## Architecture Flow
@@ -147,7 +101,7 @@ It includes:
 * Dimension tables
 * Fact tables
 * Star schema design
-  <img width="1114" height="483" alt="image" src="https://github.com/user-attachments/assets/767cd454-2bde-441e-a17c-8c4fd89877e0" />
+ 
 
 
 ---
@@ -188,22 +142,7 @@ This table connects all dimensions using surrogate keys and stores measurable bu
 
 # ⭐ Star Schema Design
 
-```text id="g13uln"
-                 dim_calendar
-                       │
-                       │
-dim_genre ─── fct_mv_predictions ─── dim_language
-                       │
-                       │
-            dim_performers
-                       │
-                       │
-              dim_crew_members
-                       │
-                       │
-                   dim_name
-```
-
+ <img width="1114" height="483" alt="image" src="https://github.com/user-attachments/assets/767cd454-2bde-441e-a17c-8c4fd89877e0" />
 ---
 
 # 🔍 Sample Analytics Queries
